@@ -5,7 +5,7 @@ date:   2016-10-23 16:38:12 -0700
 categories: diary California
 ---
 
-![farmer's market](/images/farmer's_market.JPG)
+![farmer's market](/images/farmer's_market.jpg)
 
 &emsp;本日は日曜日なので、朝からハウスメートのなみさんが僕をファーマーズマーケットに連れて行ってくれました。<br>
 新鮮でオーガニックな野菜や魚がたくさんありました。<br>
