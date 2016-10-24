@@ -1,0 +1,54 @@
+body{
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #5E5E5E;
+}
+
+main {
+  margin: 50px;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
+    margin-bottom: 20px;
+}
+
+article{
+  line-height: 2;
+}
+
+h1{
+  border-bottom: 1px solid #aaa;
+}
+
+h2{
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin-top: 40px;
+}
+
+a {
+    color: #3399CC;
+}
+
+a:-webkit-any-link {
+    color: #609;
+    text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.posts span{
+    color: #aaa;
+    font-size: 75%;
+    margin-right: 1em;
+}
+
+span.date{
+    color: #aaa;
+    font-size: 50%;
+    margin-right: 1em;
+}
