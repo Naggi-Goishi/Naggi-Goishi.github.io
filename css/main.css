@@ -88,7 +88,7 @@ header img{
   float: left;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   body{
     font-size: 15px;
   }
@@ -101,3 +101,4 @@ header img{
     width: 70%;
   }
 }
+
