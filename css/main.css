@@ -8,6 +8,7 @@ body{
 
 main {
   margin: 5%;
+  clear: both;
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
@@ -65,6 +66,26 @@ span.date, #myname a span{
 
 img{
   width: 45%;
+}
+
+header{
+  border-bottom: 1px solid #aaa;
+}
+
+header:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header h1, header a{
+  float: left;
+  border: none;
+}
+
+header img{
+  width: 10%;
+  float: left;
 }
 
 @media screen and (max-width: 480px) {
