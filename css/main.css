@@ -33,16 +33,12 @@ h2{
   margin-top: 40px;
 }
 
-a {
-    color: #3399CC;
-}
-
 a:-webkit-any-link {
-    color: #609;
+    color: #3399CC;
     text-decoration: none;
 }
 
-li {
+ul.posts li{
   list-style: none;
 }
 
@@ -87,6 +83,7 @@ header img{
   width: 10%;
   float: left;
 }
+
 
 @media screen and (max-width: 800px) {
   body{
