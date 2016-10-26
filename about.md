@@ -14,7 +14,7 @@ permalink: /about/
 * [株式会社 div](https://tech-camp.in/) as a internship
 
 ## have made ...
-* [Kadunoko.](http://kadunoko.jp/)
+* [KADUNOKO.](http://kadunoko.jp/)
 
 ## have contributed for ...
 
