@@ -61,7 +61,8 @@ span.date, #myname a span{
 }
 
 img{
-  width: 45%;
+  max-width: 45%;
+  max-height: 270px;
 }
 
 header{
