@@ -1,9 +1,11 @@
+
 body{
   font-family: "Times New Roman", Georgia, Serif;
   font-size: 18px;
   line-height: 1.5;
   font-weight: 300;
   color: #5E5E5E;
+  background-image: url(/images/background.jpeg)
 }
 
 main {
