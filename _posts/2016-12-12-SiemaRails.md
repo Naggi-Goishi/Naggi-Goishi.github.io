@@ -18,7 +18,7 @@ categories: diary
 
 ## Siema, Super Light Carousel(English)
 
-I have found a beautiful and lovely library written in Javascript,<br>
+I have found a beautiful and lovely library written,<br>
 which is super light and written in pure Javascript. Beautiful...<br>
 The library have been built by [Pawel Grzybek](https://github.com/pawelgrzybek) recently, so there was no rails integration for it.<br>
 I, who wanted to make a gem, built [siema-raisl](https://github.com/Naggi-Goishi/siema-rails) quickly and [PR](https://github.com/pawelgrzybek/siema/pull/7) that I want [siema](https://pawelgrzybek.com/siema/) to introduce it.<br>(2ed photo)
@@ -27,7 +27,7 @@ Happy Happy, Thank you, [Grzybek](https://github.com/pawelgrzybek).
 
 ## 超軽量carousel, Siema(Japanese)
 
-こんな素敵なjsライブラリを発見しました。
+こんな素敵なライブラリを発見しました。
 超軽量で生Javascriptで書かれたcarousel。美しい・・・<br>
 これはとっても最近できたばかりなので、railsのgemとしてはありませんでした。<br>
 なので、前々からgemを作ってみたかった僕が早急に[siema-raisl](https://github.com/Naggi-Goishi/siema-rails)作って、本家[siema](https://pawelgrzybek.com/siema/)に、このgemを紹介してほしいと[PR](https://github.com/pawelgrzybek/siema/pull/7)を出してみました。（二枚目画像）<br>
