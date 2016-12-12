@@ -21,8 +21,8 @@ categories: diary
 I have found a beautiful and lovely library written,<br>
 which is super light and written in pure Javascript. Beautiful...<br>
 The library have been built by [Pawel Grzybek](https://github.com/pawelgrzybek) recently, so there was no rails integration for it.<br>
-I, who wanted to make a gem, built [siema-raisl](https://github.com/Naggi-Goishi/siema-rails) quickly and [PR](https://github.com/pawelgrzybek/siema/pull/7) that I want [siema](https://pawelgrzybek.com/siema/) to introduce it.(2ed photo)<br>
-[Grzybek](https://github.com/pawelgrzybek) pleasantly merge it and introduce [siema-raisl](https://github.com/Naggi-Goishi/siema-rails), suprisingly, with my name.(3rd photo)<br>
+I, who wanted to make a gem, built [siema-rails](https://github.com/Naggi-Goishi/siema-rails) quickly and [PR](https://github.com/pawelgrzybek/siema/pull/7) that I want [siema](https://pawelgrzybek.com/siema/) to introduce it.(2ed photo)<br>
+[Grzybek](https://github.com/pawelgrzybek) pleasantly merge it and introduce [siema-rails](https://github.com/Naggi-Goishi/siema-rails), suprisingly, with my name.(3rd photo)<br>
 Happy Happy, Thank you, [Grzybek](https://github.com/pawelgrzybek).
 
 ## 超軽量carousel, Siema(Japanese)
@@ -30,7 +30,7 @@ Happy Happy, Thank you, [Grzybek](https://github.com/pawelgrzybek).
 こんな素敵なライブラリを発見しました。
 超軽量で生Javascriptで書かれたcarousel。美しい・・・<br>
 これはとっても最近できたばかりなので、railsのgemとしてはありませんでした。<br>
-なので、前々からgemを作ってみたかった僕が早急に[siema-raisl](https://github.com/Naggi-Goishi/siema-rails)作って、本家[siema](https://pawelgrzybek.com/siema/)に、このgemを紹介してほしいと[PR](https://github.com/pawelgrzybek/siema/pull/7)を出してみました。（二枚目画像）<br>
+なので、前々からgemを作ってみたかった僕が早急に[siema-rails](https://github.com/Naggi-Goishi/siema-rails)作って、本家[siema](https://pawelgrzybek.com/siema/)に、このgemを紹介してほしいと[PR](https://github.com/pawelgrzybek/siema/pull/7)を出してみました。（二枚目画像）<br>
 
 そしたら、なんと、数分のうちに喜んでもらえた趣旨の返信が帰ってきて、僕の名前付きで紹介してくれました。(三枚目の画像)<br>
 嬉しい。
