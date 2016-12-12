@@ -21,7 +21,7 @@ categories: diary
 I have found a beautiful and lovely library written,<br>
 which is super light and written in pure Javascript. Beautiful...<br>
 The library have been built by [Pawel Grzybek](https://github.com/pawelgrzybek) recently, so there was no rails integration for it.<br>
-I, who wanted to make a gem, built [siema-raisl](https://github.com/Naggi-Goishi/siema-rails) quickly and [PR](https://github.com/pawelgrzybek/siema/pull/7) that I want [siema](https://pawelgrzybek.com/siema/) to introduce it.<br>(2ed photo)
+I, who wanted to make a gem, built [siema-raisl](https://github.com/Naggi-Goishi/siema-rails) quickly and [PR](https://github.com/pawelgrzybek/siema/pull/7) that I want [siema](https://pawelgrzybek.com/siema/) to introduce it.(2ed photo)<br>
 [Grzybek](https://github.com/pawelgrzybek) pleasantly merge it and introduce [siema-raisl](https://github.com/Naggi-Goishi/siema-rails), suprisingly, with my name.(3rd photo)<br>
 Happy Happy, Thank you, [Grzybek](https://github.com/pawelgrzybek).
 
