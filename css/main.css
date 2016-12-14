@@ -8,6 +8,10 @@ body{
   background-image: url(/images/background.jpeg)
 }
 
+.hide{
+  display: none;
+}
+
 main {
   margin: 5%;
   clear: both;
@@ -71,6 +75,14 @@ header{
   border-bottom: 1px solid #aaa;
 }
 
+header .sakana-logo-container{
+  width: 100%;
+  float: left;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+
 header:after{
   content: "";
   display: block;
@@ -82,9 +94,41 @@ header h1, header a{
   border: none;
 }
 
+header #myname{
+  padding-left: 9.5%;
+  position: relative;
+  z-index: 10;
+}
+
 header img{
   width: 10%;
   float: left;
+  left: 0;
+  position: relative;
+  transition: left 5s, transform 1s;
+  z-index: -10;
+}
+
+header img.clickme{
+  width: 5%;
+  transform: scale(0);
+  position: relative;
+  top: 65px;
+  left: -25px;
+  float: none;
+  z-index: 0;
+}
+
+header .swimming{
+  left: 90%;
+}
+
+header .turning180{
+  transform: rotate(180deg);
+}
+
+header .turning360{
+  transform: rotate(360deg);
 }
 
 footer{
@@ -116,6 +160,10 @@ main footer{
 
   img{
     width: 70%;
+  }
+
+  .clickme{
+    display: none;
   }
 }
 

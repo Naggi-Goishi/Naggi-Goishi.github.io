@@ -4,7 +4,6 @@ title:  "siema-rails"
 date:   2016-12-12 13:29:12 -0700
 categories: diary
 ---
-<script src='/js/siema.min.js'></script>
 
 ### Powerd by [Siema](https://pawelgrzybek.com/siema/)
 <div class='siema'>
