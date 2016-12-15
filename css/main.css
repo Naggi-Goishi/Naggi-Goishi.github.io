@@ -39,7 +39,7 @@ h2{
   margin-top: 40px;
 }
 
-a:-webkit-any-link {
+a {
     color: #3399CC;
     text-decoration: none;
 }
