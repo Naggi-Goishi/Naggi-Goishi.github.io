@@ -1,15 +1,12 @@
 window.onload = function(){
 
   let i = 0;
-  let g = 0;
-  let b = 0;
   let command = false;
   let color = 'black';
 
   setCanvas();
 
   function RGB(){
-    this.direction = true;
     var _max;
     var _r = 255;
     var _g = 0;
@@ -52,6 +49,8 @@ window.onload = function(){
   var rgb = new RGB()
   rgb.max = 255;
 
+  setColors();
+
   window.addEventListener('keydown', function(e){
     if (e.keyCode === 91){
       command = true;
@@ -74,8 +73,6 @@ window.onload = function(){
     body.innerHTML = html;
   }
 
-  setColors(rgb);
-
   function setColors(){
     colors = [];
     colors.push(...add('g'));
@@ -97,8 +94,6 @@ window.onload = function(){
       canvas.style.backgroundColor = color;
       canvas.classList.add('colorBox');
       i += 1;
-      console.log(color);
-      console.log(rgb.max);
     }
   }
 
