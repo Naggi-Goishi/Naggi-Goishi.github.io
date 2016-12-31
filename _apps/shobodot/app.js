@@ -2,9 +2,11 @@ window.onload = function(){
 
   let i = 0;
   let command = false;
-  let color = 'black';
+  let mouseColor = 'black';
 
   setCanvas();
+
+  const canvases = document.querySelectorAll('.canvas');
 
   function RGB(){
     var _max;
@@ -72,6 +74,8 @@ window.onload = function(){
     }
     body.innerHTML = html;
   }
+
+
 
   function setColors(){
     colors = [];
@@ -143,27 +147,25 @@ window.onload = function(){
     return colors;
   }
 
-  i = 0;
+  canvases.forEach(canvas => execClick(canvas));
 
-  const canvases = document.querySelectorAll('.canvas');
-
-  canvases.forEach(function(canvas){
+  function execClick(canvas){
     if (canvas.classList.contains('colorBox')){
-      canvas.addEventListener('click', changeColor);
+      canvas.addEventListener('click', changeMouseColor);
     } else {
       canvas.addEventListener('click', dot)
     }
-  });
+  }
 
-  function changeColor(){
-    color = this.style.backgroundColor;
+  function changeMouseColor(){
+    mouseColor = this.style.backgroundColor;
   }
 
   function dot(){
     if (command){
       this.style.backgroundColor = '#fff';
     } else{
-      this.style.backgroundColor = color;
+      this.style.backgroundColor = mouseColor;
     }
   }
 
