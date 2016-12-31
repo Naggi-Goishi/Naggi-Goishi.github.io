@@ -16,6 +16,7 @@ permalink: /about/
 ## have made ...
 * [KADUNOKO.](http://kadunoko.jp/)
 * [siema-rails](https://github.com/Naggi-Goishi/siema-rails)
+* [ShoboDot](/apps/shobodot/index.html)
 
 ## have contributed for ...
 
