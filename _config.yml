@@ -20,5 +20,9 @@ description: > # this means to ignore newlines until "baseurl:"
 avatar: https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/13439030_2069725146585206_7092832367045176304_n.jpg?oh=e02383fb88f3e7681d21930b052b911d&oe=589C2DC6
 github_username: Naggi-Goishi
 
+collections:
+  apps:
+    output: true
+
 # Build settings
 markdown: kramdown
