@@ -34,13 +34,3 @@ Happy Happy, Thank you, [Grzybek](https://github.com/pawelgrzybek).
 そしたら、なんと、数分のうちに喜んでもらえた趣旨の返信が帰ってきて、僕の名前付きで紹介してくれました。(三枚目の画像)<br>
 嬉しい。
 
-
-
-
-
-<script>
-  mySiema = new Siema();
-  document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-  document.querySelector('.next').addEventListener('click', () => mySiema.next());
-</script>
-
