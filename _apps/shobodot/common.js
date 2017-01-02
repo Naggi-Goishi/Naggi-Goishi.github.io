@@ -1,28 +1,6 @@
 function ShoboDot(){
 	this.init();
 	var _dots;
-	var add = function add(i){
-		const colors = [];
-		let r = rgb.r;
-		let g = rgb.g;
-		let b = rgb.b;
-		if (i === 'r'){
-			for (r; r < rgb.max; r+=5){
-				colors.push(`rgb(${r}, ${g}, ${b})`);
-			}
-		} else if (i === 'g'){
-			for (g; g < rgb.max; g+=5){
-				colors.push(`rgb(${r}, ${g}, ${b})`);
-			}
-		} else if (i === 'b'){
-			for (b; b < rgb.max; b+=5){
-					colors.push(`rgb(${r}, ${g}, ${b})`);
-			}
-		} else{
-			console.log('ERROR: invalid "i"');
-		}
-		return colors;
-	}
 
 	Object.defineProperty(this, 'dots', {
 		get: function(){return document.querySelectorAll('.dot');},
@@ -109,6 +87,29 @@ function RGB(){
 	let mouseColor = 'black';
 	let command = false;
 
+	function add(i){
+		const colors = [];
+		let r = rgb.r;
+		let g = rgb.g;
+		let b = rgb.b;
+		if (i === 'r'){
+			for (r; r < rgb.max; r+=5){
+				colors.push(`rgb(${r}, ${g}, ${b})`);
+			}
+		} else if (i === 'g'){
+			for (g; g < rgb.max; g+=5){
+				colors.push(`rgb(${r}, ${g}, ${b})`);
+			}
+		} else if (i === 'b'){
+			for (b; b < rgb.max; b+=5){
+					colors.push(`rgb(${r}, ${g}, ${b})`);
+			}
+		} else{
+			console.log('ERROR: invalid "i"');
+		}
+		return colors;
+	}
+
 function substract(i){
 	const colors = [];
 	let r = rgb.r;
@@ -137,7 +138,7 @@ function clickFunction(dot){
   if (dot.classList.contains('colorBox')){
     dot.addEventListener('click', changeMouseColor);
   } else {
-    dot.addEventListener('click', paintClickedDot);
+    dot.addEventListener('click', clickDot);
   }
 }
 
@@ -145,13 +146,11 @@ function changeMouseColor(){
   mouseColor = this.style.backgroundColor;
 }
 
-function paintClickedDot(){
+function clickDot(){
   if (command){
-    this.style.backgroundColor = '#fff';
+    deleteDot(this)
   } else{
-    const audio = document.getElementById('dot');
-    audio.play();
-    this.style.backgroundColor = mouseColor;
+  	paint(this);
   }
 }
 
@@ -163,4 +162,14 @@ function XlineNum(){
       i += 1;
   });
   return i;
+}
+
+function paint(dot){
+	const audio = document.getElementById('dot');
+	audio.play();
+	dot.style.backgroundColor = mouseColor;
+}
+
+function deleteDot(dot){
+	dot.style.backgroundColor = 'rgb(0, 0, 0)';
 }
