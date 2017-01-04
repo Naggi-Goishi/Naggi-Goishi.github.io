@@ -1,7 +1,5 @@
 window.onload = function(){
-  const shobodot = new ShoboDot()
-  shobodot.setColors();
-  shobodot.dots.forEach(dot => clickFunction(dot));
+  const shobodot = new ShoboDot({colorBoxes: true, clickFunction: true})
 }
 
 window.addEventListener('keydown', function(e){
