@@ -1,8 +1,8 @@
 window.onload = function() {
   const sakana = document.querySelector('img')
   const header = document.querySelector('header');
-  const clickme = document.querySelector('.clickme')
-  const MAX_POSITION = header.getBoundingClientRect().width - sakana.getBoundingClientRect().width
+  const clickme = document.querySelector('.clickme');
+  const MAX_POSITION = header.getBoundingClientRect().width - sakana.getBoundingClientRect().width;
 
   function swim(){
     sakana.classList.add('swimming');
