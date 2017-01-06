@@ -2,7 +2,7 @@
 layout: post
 title:  "siema-rails"
 date:   2016-12-12 13:29:12 -0700
-categories: diary
+categories: diary programming
 ---
 
 ### Powerd by [Siema](https://pawelgrzybek.com/siema/)

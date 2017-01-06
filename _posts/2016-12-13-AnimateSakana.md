@@ -2,7 +2,7 @@
 layout: post
 title:  "animate Sakana"
 date:   2016-12-13 18:58:12 -0700
-categories: diary
+categories: diary programming
 ---
 
   <div><img src="/images/さかな.png" alt="siema1"></div>
