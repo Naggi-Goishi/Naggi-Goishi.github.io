@@ -7,7 +7,7 @@ categories: diary
 
 ## [ShoboDotGame](/apps/shobodot/game/index.html)
 
-![shobodotGame](/images/shobodot_game.png)
+<img meta property="og:image" src="/images/shobodot_game.png">
 
 Spending a week and a few days, I made a ShoboDot [Game](/apps/shobodot/game/index.html), written in pure javascript. <br>
 Once you checked it out, you will notice how poor the game is. <br>
