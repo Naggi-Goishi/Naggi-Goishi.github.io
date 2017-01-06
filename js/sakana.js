@@ -1,12 +1,12 @@
 window.onload = function() {
-  const sakana = document.querySelector('img')
+  const sakana = document.querySelector('img');
   const header = document.querySelector('header');
   const clickme = document.querySelector('.clickme');
   const MAX_POSITION = header.getBoundingClientRect().width - sakana.getBoundingClientRect().width;
 
   function swim(){
     sakana.classList.add('swimming');
-    clickme.classList.add('hide')
+    clickme.classList.add('hide');
   }
 
   function animate(e){
@@ -28,9 +28,9 @@ window.onload = function() {
   sakana.addEventListener('transitionend', animate);
 
   setTimeout(function(){
-    clickme.style.transform = 'scale(1)'
+    clickme.style.transform = 'scale(1)';
   }, 1000);
   setTimeout(function(){
-    clickme.style.transform = 'scale(0)'
+    clickme.style.transform = 'scale(0)';
   }, 3000);
 };

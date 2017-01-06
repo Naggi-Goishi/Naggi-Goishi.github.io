@@ -122,7 +122,7 @@ ShoboDot.prototype.init = function init() {
     function _paintColorBoxes() {
       let i
 
- = 0;
+        = 0;
       for (let color of colors) {
         dot = document.getElementById(i);
         dot.style.backgroundColor = color;
@@ -366,7 +366,8 @@ Dot.prototype.moveLeft = function moveLeft() {
   deleteDot(dot);
   paint(nextDot, this.color, this.name);
   this.positionId -= 1;
-  function _invalid(){
+
+  function _invalid() {
     return self.boomed || self.coordination.y === 0 && self.coordination.x === 0;
   }
 };
@@ -379,6 +380,7 @@ Dot.prototype.moveRight = function moveRight() {
   deleteDot(dot);
   paint(nextDot, this.color, this.name);
   this.positionId += 1;
+
   function _invalid() {
     return self.boomed || self.coordination.y === ShoboDot.maxHeight && self.coordination.x === ShoboDot.getXline();
   }
@@ -392,7 +394,8 @@ Dot.prototype.moveDown = function moveDown() {
   deleteDot(dot);
   paint(nextDot, this.color, this.name);
   this.positionId += ShoboDot.getXline();
-  function _invalid(){
+
+  function _invalid() {
     return self.boomed || self.coordination.y === ShoboDot.maxHeight;
   }
 };
