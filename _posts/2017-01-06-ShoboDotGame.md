@@ -7,6 +7,8 @@ categories: diary
 
 ## [ShoboDotGame](/apps/shobodot/game/index.html)
 
+![shobodotGame](/images/shobodot_game.png)
+
 Spending a week and a few days, I made a ShoboDot [Game](/apps/shobodot/game/index.html), written in pure javascript. <br>
 Once you checked it out, you will notice how poor the game is. <br>
 I thought so too when I finish building it, and this project let me know that without any framework or library it is building a thing takes incredible time and work. <br>
