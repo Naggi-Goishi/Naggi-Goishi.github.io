@@ -21,6 +21,10 @@ ShoboDotGame consists of 4 files:
 All I wrote.<br>
 I am going to make my code organize and clean.
 
+### How to Play
+* beam -- space
+* move -- arrow keys or w, a, s, d keys
+
 ## [ショボドットゲーム](/apps/shobodot/game/index.html)
 
 一週間とちょっとのコーディングで、[ショボドットゲーム](/apps/shobodot/game/index.html)を作りました。<br>
@@ -29,3 +33,7 @@ I am going to make my code organize and clean.
 これが、まーー、大変でした。でも学ぶものは非常に多かったです。<br>
 何よりも楽しかった。このゲームのすべてが僕の書いた、801行のjavascriptと1６行のhtml、18行のcssで動いていると思うとわくわくどきどきします。<br>
 もう、最後の方はコードの美しさを無視して、書いてしまったので、今からきれいにしてきます。
+
+## 遊び方
+* ビーム -- スペースキー
+* 動き -- 十字キー　又は　w, a, s, d keys
