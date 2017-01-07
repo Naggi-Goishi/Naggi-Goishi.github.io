@@ -4,10 +4,11 @@ title:  "ShoboDotGame"
 date:   2017-01-01 14:44:12 -0700
 categories: diary
 ---
+<meta property="og:image" content="/images/shobodot_game.png">
 
 ## [ShoboDotGame](/apps/shobodot/game/index.html)
 
-<img meta property="og:image" src="/images/shobodot_game.png">
+![shobodotGame](/images/shobodot_game.png)
 
 Spending a week and a few days, I made a ShoboDot [Game](/apps/shobodot/game/index.html), written in pure javascript. <br>
 Once you checked it out, you will notice how poor the game is. <br>
