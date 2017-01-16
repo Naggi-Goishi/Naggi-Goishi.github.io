@@ -144,34 +144,60 @@ const COLORS = {
 let mouseColor = COLORS.black;
 let command = false;
 const playerInstances = [];
+const getMouseColor = function getMouseColor() {
+  return mouseColor;
+};
 
 const paint = function paint(dot, color, name) {
-  const audio = document.getElementById('dot');
-  const _isUndefined = function _isUndefined(arg) {
-    return typeof arg === 'undefined';
-  };
-  audio.play();
-  if (_isUndefined(color)) {
-    dot.style.backgroundColor = mouseColor;
-  } else if (!dot) {
-    return;
-  } else {
-    dot.style.backgroundColor = color;
+  _changeBackgroundColor();
+  _addClass();
+  _playAudio();
+
+  function _changeBackgroundColor() {
+    if (!dot) return;
+    if (!color) {
+      dot.style.backgroundColor = mouseColor;
+    } else {
+      dot.style.backgroundColor = color;
+    }
   }
-  if (_isUndefined(name)) return;
-  dot.classList.add(name);
+
+  function _addClass() {
+    if (!!name) {
+      dot.classList.add(name);
+    }
+  }
+
+  function _playAudio() {
+    const audio = document.getElementById('dot');
+    audio.play();
+  }
 };
+//end of paint
 
 const deleteDot = function deleteDot(dot) {
   if (!dot) return;
-  dot.classList = "";
-  dot.classList.add('dot');
-  dot.style.backgroundColor = 'rgb(255,255,255)';
-};
+  _clearClassList();
+  _paintWithWhite();
 
-function getPositionId(x, y) {
-  return Math.round(ShoboDot.getXline() * y + x);
-}
+  function _clearClassList() {
+    dot.classList = "";
+    dot.classList.add('dot');
+  }
+
+  function _paintWithWhite() {
+    dot.style.backgroundColor = 'white';
+  }
+};
+//end of deleteDot
+
+const getPositionId = function getPositionId(x, y) {
+  const result = Math.round(ShoboDot.getXline() * y + x);
+  if (result <= ShoboDot.maxDots) {
+    throw new Error(`The coordinations are out of range, ${result}`);
+  }
+  return result;
+};
 
 // ShoboDot func starts.
 function ShoboDot(options) {
@@ -179,32 +205,26 @@ function ShoboDot(options) {
     colorBoxes: false,
     clickFunction: false,
   }, options);
-
-  this.init();
+  let _dots;
 
   Object.defineProperty(this, 'dots', {
     get: function() {
-      return document.querySelectorAll('.dot');
+      return _dots;
+    },
+    set: function(val) {
+      _dots = val;
     }
   });
+
+  this.init();
 }
 
-//Property of ShoboDot itself
-ShoboDot.getXline = function getXline() {
-  const dots = document.querySelectorAll('.dot');
-  let i = 0;
-  dots.forEach(function(box) {
-    if (box.offsetTop === 1) {
-      i += 1;
-    }
-  });
-  return i;
-};
 
 //Properties of Prototypes of Shobodot
 
 //Constructor
 ShoboDot.prototype.init = function init() {
+  const self = this;
   _setCanvas();
   if (this.config.colorBoxes) {
     _setColorBoxes();
@@ -213,18 +233,13 @@ ShoboDot.prototype.init = function init() {
     _setClickFunction();
   }
 
+  //definitions of private functions
   function _setCanvas() {
     const canvas = document.querySelector('.shobodot');
-    const maxHeight = canvas.offsetHeight / 12;
-    const maxWidth = canvas.offsetWidth / 12;
-    const maxDots = maxHeight * maxWidth;
-
-    if (maxHeight < 1 || maxWidth < 1) {
-      throw new Error(
-        `your height or width of shobodot div is too short.
-         maxWidth: ${maxWidth} maxHeight: ${maxHeight}`
-      );
-    }
+    const maxYDots = canvas.offsetHeight / 12 || canvas.style.height.slice(0, -2) / 12;
+    const maxXDots = canvas.offsetWidth / 12 || canvas.style.width.slice(0, -2) / 12;
+    const maxDots = maxYDots * maxXDots;
+    _validate(maxYDots, maxXDots, canvas);
 
     let html = '';
     for (var i = 0; i < maxDots; i++) {
@@ -232,9 +247,29 @@ ShoboDot.prototype.init = function init() {
     }
     canvas.innerHTML = html;
 
-    ShoboDot.lastDotId = Math.round(maxDots);
-    ShoboDot.maxHeight = Math.floor(maxDots / ShoboDot.getXline());
+    _setVariables();
+
+    function _setVariables() {
+      self.dots = Array.from(document.querySelectorAll('.dot'));
+      ShoboDot.lastDotId = Math.round(maxDots);
+      ShoboDot.maxYDots = Math.floor(maxYDots);
+      ShoboDot.maxXDots = Math.floor(maxXDots);
+      ShoboDot.getXline = function getXline() {
+        let i = 0;
+        self.dots.forEach(function(dot) {
+          if (dot.offsetTop === 1) {
+            i += 1;
+          }
+        });
+        if (i === 0) {
+          i = Math.floor(maxXDots);
+        }
+        return i;
+      };
+    }
+
   }
+  //end of _setCanvas
 
   function _setColorBoxes() {
     let i = 0;
@@ -249,9 +284,10 @@ ShoboDot.prototype.init = function init() {
       i += 1;
     }
   }
+  //end of setColorBoxes
 
   function _setClickFunction() {
-    const dots = document.querySelectorAll('.dot');
+    const dots = self.dots;
     dots.forEach(function(dot) {
       if (_colorBox(dot)) {
         dot.addEventListener('click', _changeMouseColor);
@@ -276,8 +312,35 @@ ShoboDot.prototype.init = function init() {
       return dot.classList.contains('colorBox');
     }
   }
+  //end of _setClickFunction
 
+  function _validate(y, x, canvas) {
+    if (!canvas) {
+      throw new Error(
+        'No html block that has class, shobodot');
+    }
+    if (_noSize()) {
+      throw new Error(
+        'The height and width of canvas is undefined.' +
+        'You have to give canvas the properties');
+    } else if (_tooSmall()) {
+      throw new Error(
+        `The height or width of shobodot div is too short.
+         maxXDots: ${x} maxYDots: ${y}`
+      );
+    }
+
+    function _noSize() {
+      return !y || !x;
+    }
+
+    function _tooSmall() {
+      return y < 1 || x < 1;
+    }
+  }
+  //end of _valudateCanvas
 };
+
 // ShoboDot ends
 
 //Dot func starts, most objects will inherit this func.
@@ -406,7 +469,7 @@ Dot.prototype.moveRight = function moveRight() {
   this.positionId += 1;
 
   function _invalid() {
-    return self.boomed || self.coordination.y === ShoboDot.maxHeight && self.coordination.x === ShoboDot.getXline();
+    return self.boomed || self.coordination.y === ShoboDot.maxYDots && self.coordination.x === ShoboDot.getXline();
   }
 };
 
@@ -420,7 +483,7 @@ Dot.prototype.moveDown = function moveDown() {
   this.positionId += ShoboDot.getXline();
 
   function _invalid() {
-    return self.boomed || self.coordination.y === ShoboDot.maxHeight;
+    return self.boomed || self.coordination.y === ShoboDot.maxYDots;
   }
 };
 
@@ -462,4 +525,15 @@ Dot.prototype.update = function update(position) {
     return Math.floor(dot.positionId / ShoboDot.getXline());
   }
 };
+
+_exportsForTest();
+
+function _exportsForTest() {
+  if (typeof exports === 'undefined') return;
+  exports.paint = paint;
+  exports.ShoboDot = ShoboDot;
+  exports.deleteDot = deleteDot;
+  exports.getPositionId = getPositionId;
+  exports.getMouseColor = getMouseColor;
+}
 

@@ -26,7 +26,6 @@ describe('ShoboDot', function() {
           dot.click();
           dot.style.backgroundColor.should.equal('black');
         });
-
         it('click colorBox', function() {
           const shobodot = new ShoboDot({ clickFunction: true, colorBoxes: true });
           const dot = _getDot('0');
