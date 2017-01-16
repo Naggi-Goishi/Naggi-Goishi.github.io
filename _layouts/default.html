@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="description" content="my portfolio">
-      <meta name="author" content="Naggi Goishi">
-      <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="/css/main.css">
-      <link rel="stylesheet" href="/css/syntax.css">
-      <link rel="shortcut icon" href="/images/favicon.ico" >
-      <script src='/lib/siema.min.js'></script>
-      <script src='/js/sakana.js'></script>
-      <title>{{ page.title }}</title>
-   </head>
 
-   {% include header.html %}
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="my portfolio">
+    <meta name="author" content="Naggi Goishi">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <script src='/lib/siema.min.js'></script>
+    <script src='/js/sakana.js'></script>
+    <title>{{ page.title }}</title>
+</head>
+{% include header.html %}
 
-   <body>
-      <main>
-         {{ content }}
-      </main>
-   </body>
+<body>
+    <main>
+        {{ content }}
+    </main>
+</body>
+<footer>
+    <div id="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+        <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </div>
+</footer>
 
-   <footer>
-      <div id="footer">
-         <a href="http://naggi-blog.com/">Blog | ブログ</a>
-      </div>
-   </footer>
 </html>
