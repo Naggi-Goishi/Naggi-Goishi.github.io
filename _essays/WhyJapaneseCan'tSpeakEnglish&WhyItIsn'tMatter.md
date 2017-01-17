@@ -5,6 +5,8 @@ date:   2016-01-16 14:31:12 -0700
 categories: English Japan
 ---
 
+![english-bisket](/images/english-bisket.png)
+
 日本人と英語。これはとってもよく話されてきた話題です。
 日本の教育方法が悪い、外国人と話す機会がないなど理由も言わずとしれています。
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Naggi Goishi
+title: Naggi Goishi's Home Page
 ---
 
 <div id="home">
