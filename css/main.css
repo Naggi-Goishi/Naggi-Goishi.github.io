@@ -1,41 +1,54 @@
-body{
-  font-family: "Times New Roman", Georgia, Serif;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #5E5E5E;
-  background-image: url(/images/background.jpeg)
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #5E5E5E;
+    background-image: url(/images/background.jpeg)
 }
 
-.hide{
-  display: none;
+.hide {
+    display: none;
 }
 
 main {
-  margin: 5%;
-  clear: both;
+    margin: 5%;
+    clear: both;
 }
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+.highlight {
     margin-bottom: 20px;
 }
 
-h1#myname a{
-  color: #5E5E5E;
+h1#myname a {
+    color: #5E5E5E;
 }
 
-article{
-  line-height: 2;
+article {
+    line-height: 2;
 }
 
-h1{
-  border-bottom: 1px solid #aaa;
+h1 {
+    border-bottom: 1px solid #aaa;
 }
 
-h2{
-  font-size: 1.5em;
-  text-decoration: underline;
-  margin-top: 40px;
+h2 {
+    font-size: 1.5em;
+    text-decoration: underline;
+    margin-top: 40px;
 }
 
 a {
@@ -43,127 +56,144 @@ a {
     text-decoration: none;
 }
 
-ul.posts li{
-  list-style: none;
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.posts span{
+ul.posts li {
+    list-style: none;
+}
+
+.posts span {
     color: #aaa;
     font-size: 75%;
     margin-right: 1em;
 }
 
-span.date{
+ul.essays li {
+    list-style: none;
+}
+
+.essays span {
+    color: #aaa;
+    font-size: 75%;
+    margin-right: 1em;
+}
+
+span.date {
     color: #aaa;
     font-size: 50%;
     margin-right: 1em;
 }
 
-span.date, #myname a span{
+span.date,
+#myname a span {
     color: #aaa;
     font-size: 50%;
     margin-right: 1em;
 }
 
-img{
-  max-width: 45%;
-  max-height: 270px;
+img {
+    max-width: 45%;
+    max-height: 270px;
 }
 
-header{
-  border-bottom: 1px solid #aaa;
+header {
+    border-bottom: 1px solid #aaa;
 }
 
-header .sakana-logo-container{
-  width: 100%;
-  float: left;
-  left: 0;
-  position: absolute;
-  z-index: 0;
+header .sakana-logo-container {
+    width: 100%;
+    float: left;
+    left: 0;
+    position: absolute;
+    z-index: 0;
 }
 
-header:after{
-  content: "";
-  display: block;
-  clear: both;
+header:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-header h1, header a{
-  float: left;
-  border: none;
+header h1,
+header a {
+    float: left;
+    border: none;
 }
 
-header #myname{
-  padding-left: 9.5%;
-  position: relative;
-  z-index: 10;
+header #myname {
+    padding-left: 9.5%;
+    position: relative;
+    z-index: 10;
 }
 
-header img{
-  width: 10%;
-  float: left;
-  left: 0;
-  position: relative;
-  transition: left 5s, transform 1s;
-  z-index: -10;
+header img {
+    width: 10%;
+    float: left;
+    left: 0;
+    position: relative;
+    transition: left 5s, transform 1s;
+    z-index: -10;
 }
 
-header img.clickme{
-  width: 5%;
-  transform: scale(0);
-  position: relative;
-  top: 65px;
-  left: -25px;
-  float: none;
-  z-index: 0;
+header img.clickme {
+    width: 5%;
+    transform: scale(0);
+    position: relative;
+    top: 65px;
+    left: -25px;
+    float: none;
+    z-index: 0;
 }
 
-header .swimming{
-  left: 90%;
+header .swimming {
+    left: 90%;
 }
 
-header .turning180{
-  transform: rotate(180deg);
+header .turning180 {
+    transform: rotate(180deg);
 }
 
-header .turning360{
-  transform: rotate(360deg);
+header .turning360 {
+    transform: rotate(360deg);
 }
 
-footer{
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #aaa;
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #aaa;
 }
 
-#footer{
-  margin-bottom: 30px;
-  margin-top: 10px;
+#footer {
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
-#footer a:-webkit-any-link{
-  color: #aaa;
+#footer a:-webkit-any-link {
+    color: #aaa;
 }
 
-main footer{
-  border: none;
+main footer {
+    border: none;
 }
 
 @media screen and (max-width: 800px) {
-  body{
-    font-size: 15px;
-  }
-
-  header img{
-    margin-top: 30px;
-  }
-
-  img{
-    width: 70%;
-  }
-
-  .clickme{
-    display: none;
-  }
+    body {
+        font-size: 15px;
+    }
+    header img {
+        margin-top: 30px;
+    }
+    img {
+        width: 70%;
+    }
+    .clickme {
+        display: none;
+    }
+    #cc-img {
+        width: 50px;
+    }
 }
-
