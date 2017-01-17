@@ -3,6 +3,8 @@ layout: post
 title:  "どうして日本人は英語が喋れないか。どうしてそれでいいのか。"
 date:   2016-01-16 14:31:12 -0700
 categories: English Japan
+imageUrl: "/images/english-bisket.png"
+description: "現在の日本の英語教育の方向性はその必要性に合わせた非常に合理的なものだと思います。"
 ---
 
 ![english-bisket](/images/english-bisket.png)
