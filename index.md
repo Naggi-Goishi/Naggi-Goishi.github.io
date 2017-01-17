@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Naggi
+title: Naggi Goishi
 ---
 
 <div id="home">
