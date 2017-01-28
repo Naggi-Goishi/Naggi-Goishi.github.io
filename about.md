@@ -11,7 +11,8 @@ permalink: /about/
 
 ## have worked (am working) for...
 
-* [株式会社 div](https://tech-camp.in/) as a internship
+* [株式会社 div](https://tech-camp.in/) as an internship
+* [株式会社 orario](http://www.orario.jp/) as an internship
 
 ## have made ...
 * [KADUNOKO.](http://kadunoko.jp/)
