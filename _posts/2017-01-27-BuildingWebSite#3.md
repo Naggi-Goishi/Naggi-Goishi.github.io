@@ -3,7 +3,7 @@ layout: post
 title:  "本を無料で貰えるサイトを作る No.3"
 date:   2017-01-26 21:25:12 -0700
 categories: diary hpbooks
-description: "今回したこと- ふむふむ（キャラクター）作った。- トップ画面を完成させた。- タスクをGithubのProjectで管理し始めた。- 環境構築を自動化"
+description: "今回したこと-ふむふむ（キャラクター）作った。-トップ画面を完成させた。-タスクをGithubのProjectで管理し始めた。-環境構築を自動化"
 ---
 
 <div class='siema'>
