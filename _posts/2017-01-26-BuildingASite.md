@@ -2,7 +2,7 @@
 layout: post
 title:  "本を無料で貰えるサイトを作る"
 date:   2017-01-26 02:05:12 -0700
-categories: diary
+categories: diary hpbooks
 description: "テーマは「知的活動を好きになってくれる人を増やすこと」と「知的活動が好きな人の学びを促進すること」"
 ---
 

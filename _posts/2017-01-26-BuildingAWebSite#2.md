@@ -2,7 +2,7 @@
 layout: post
 title:  "本を無料で貰えるサイトを作る No.2"
 date:   2017-01-26 21:25:12 -0700
-categories: diary
+categories: diary hpbooks
 description: "何をするにせよ、開発していく過程でプロジェクトの名前がないと不便なので仮名として、hpbooksにする。"
 ---
 
