@@ -3,6 +3,7 @@ layout: post
 title:  "エンジニアとしての働き方"
 date:   2017-02-12 08:37:12 -0700
 categories: diary
+imageUrl: "/images/さかな.png"
 description: "僕が、プログラミングを勉強する前と後、こうも職を得るのに苦労の量が違うのか。"
 ---
 
