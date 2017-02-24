@@ -3,7 +3,7 @@ layout: post
 title:  "本を無料で貰えるサイトを作る No.5"
 date:   2017-02-24 03:45:12 -0700
 categories: diary hpbooks
-description: "僕が、プログラミングを勉強する前と後、こうも職を得るのに苦労の量が違うのか。"
+description: "最近は、TECH::CAMPに沢山コミットしたり、将棋にハマって、NHK将棋杯を片っ端からみたりしています。"
 ---
 
 ![card](/images/hpbooks_card.png)
