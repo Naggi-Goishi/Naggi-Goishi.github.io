@@ -24,18 +24,22 @@ description: "最近は、TECH::CAMPに沢山コミットしたり、将棋に�
 
 今回、学んだことは、Sinatraでの `render partial` の仕方です。ルーターと同じようにファイルを呼び出すだけなのですが・・・笑
 
-```ruby
+{% highlight slim %}
+
 h1 Hello
 == slim :my_partial
-```
+
+{% endhighlight %}
 
 そして、今回ハマったのが、 `slim` の記法です。これがまた、お恥ずかしい話なのですが、 `==` と `=` の違いを知らなくて、生のHTMLが画面に表示されて参りました。 `==` で、エスケープされてない文字列を所得することが出来ます。
 
 上記のエラーで、Sinatraのソースコードを読んだのですが、 [`Tilt`](https://github.com/rtomayko/tilt) というクラスを使っていまして、これまた勉強になりました。僕の [playground](https://github.com/Naggi-Goishi/playground/tree/master/ruby/tilt)でいろいろ遊んでみまして、これを使いますと、railsなどの、 `reder` メソッドを再現できますね。これを気に、[ActionViewのコード](https://github.com/rails/rails/blob/master/actionview/lib/action_view/renderer/partial_renderer.rb)を読んでみましたが、どうやらこのライブラリは使われてないようでした。
 
-```ruby
+{% highlight ruby %}
+
 require 'tilt'
 template = Tilt.new('my_view.slim')
 # これが my_view.slim を htmlとして返してくれる。
 template.render
-```
+
+{% endhighlight %}

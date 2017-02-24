@@ -1,6 +1,6 @@
 body {
     font-family: "Times New Roman", Georgia, Serif;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
     font-weight: 300;
     color: #5E5E5E;
@@ -167,7 +167,8 @@ footer {
     border-top: 1px solid #aaa;
 }
 
-div.highlighter-rouge pre.highlight {
+
+figure.highlight {
     overflow: scroll;
 }
 
@@ -199,5 +200,8 @@ main footer {
     }
     #cc-img {
         width: 50px;
+    }
+    figure.highlight {
+        margin: 0;
     }
 }

@@ -18,11 +18,13 @@ description: "今回はかなり技術的な記事になると思います。サ
 
 データーベースをmysqlに決めたのならば、早速導入していきましょう。mysql2という素敵なgem（mysqlの操作をrubyから出来るようにしたもの）があるので、それを一度テストとして走らせてみます。
 
-```ruby
+{% highlight ruby %}
+
 require 'mysql2'
 client = Mysql2::Client.new(host: => "localhost", username: "root")
 result = client.query("CREATE DATABASE TESTING_MYSQL2")
-```
+
+{% endhighlight %}
 
 こんな感じで、データーベースが作れます。では、実際にhpbooksに導入してみましょう。
 
@@ -32,7 +34,8 @@ result = client.query("CREATE DATABASE TESTING_MYSQL2")
 
 例えば、今回はUserのテーブルを作成しました、その時のmigration fileはこんな感じです。
 
-```ruby
+{% highlight ruby %}
+
 require_relative '../db_table'
 
 table_name = 'users'
@@ -45,7 +48,8 @@ colums = {
 }
 
 DB_Table.new(table_name, colums);
-```
+
+{% endhighlight %}
 
 結構わかりやすい記述になっているかと思います。
 

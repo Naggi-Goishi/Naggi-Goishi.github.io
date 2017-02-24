@@ -25,26 +25,30 @@ Webサイトを作るとなるとさっそくガンガンコード書いてい�
 
 公式ドキュメントでは、hello world(一番単純なコード)の例が載ってました。
 
-```ruby
+{% highlight ruby %}
+
 # myapp.rb
 require 'sinatra'
 
 get '/' do
   'Hello world!'
 end
-```
+
+{% endhighlight %}
 
 これだけあれば、ホームページは出来てしまいますね。では、さっそく、ルーティングから初めて、Hello hpbooksのコードを書いていきます。
 
 hpbooks.rbというファイルを作り、以下のように記述して、`ruby`コマンドで動かしてみます。
 
-```ruby
+{% highlight ruby %}
+
 require 'sinatra'
 
 get '/' do
   "hello hpbooks! and sinatra"
 end
-```
+
+{% endhighlight %}
 
 そして、localhost:4567をブラウザで開いてみるとちゃんと出来てました。ほっ。
 
