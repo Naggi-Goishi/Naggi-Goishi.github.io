@@ -249,6 +249,8 @@ ShoboDot.prototype.init = function init() {
 
     _setVariables();
 
+    canvas.style.height = 'auto';
+
     function _setVariables() {
       self.dots = Array.from(document.querySelectorAll('.dot'));
       ShoboDot.lastDotId = Math.round(maxDots);
@@ -341,6 +343,66 @@ ShoboDot.prototype.init = function init() {
   //end of _valudateCanvas
 };
 
+
+ShoboDot.prototype.plusSize = function plusSize() {
+  this.dots.forEach(function(dot) {
+    _plusHeight(dot);
+    _plusWidth(dot);
+  });
+
+  function _plusHeight(dot) {
+    const height = dot.style.height;
+    if (height) {
+      dot.style.height = parseInt(height) + 1 + 'px';
+    } else {
+      dot.style.height = '11px';
+    }
+  }
+
+  function _plusWidth(dot) {
+    const width = dot.style.width;
+    if (width) {
+      dot.style.width = parseInt(width) + 1 + 'px';
+    } else {
+      dot.style.width = '11px';
+    }
+  }
+};
+
+ShoboDot.prototype.minusSize = function minusSize() {
+  this.dots.forEach(function(dot) {
+    _minusHeight(dot);
+    _minusWidth(dot);
+  });
+
+  function _minusHeight(dot) {
+    const height = dot.style.height;
+    if (height) {
+      dot.style.height = parseInt(height) - 1 + 'px';
+    } else {
+      dot.style.height = '9px';
+    }
+  }
+
+  function _minusWidth(dot) {
+    const width = dot.style.width;
+    if (width) {
+      dot.style.width = parseInt(width) - 1 + 'px';
+    } else {
+      dot.style.width = '9px';
+    }
+  }
+};
+
+ShoboDot.prototype.swichBorders = function swichBorders() {
+  const canvas = document.querySelector('.shobodot');
+
+  if (canvas.classList.contains('without-border')) {
+    canvas.classList.remove('without-border')
+  } else {
+    canvas.classList.add('without-border')
+  }
+}
 // ShoboDot ends
 
 //Dot func starts, most objects will inherit this func.
