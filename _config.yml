@@ -21,6 +21,8 @@ avatar: https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/13439030_206972514658520
 github_username: Naggi-Goishi
 
 collections:
+    posts:
+      permalink: /posts/:year/:month/:day/:title/
     apps:
       output: true
     essays:
