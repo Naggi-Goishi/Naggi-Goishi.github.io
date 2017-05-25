@@ -4,11 +4,12 @@ title: Diarys
 permalink: /diarys/
 ---
 
-{% for post in site.diarys %}
+{% assign diarys = site.diarys | reversed %}
+{% for diary in diarys limit: 10 %}
   <content>
-    <h1> {{ post.date | date_to_string }} </h1>
+    <h1> {{ diary.date | date_to_string }} </h1>
     <div class='diary-content'>
-      {{ post }}
+      {{ diary }}
     </div>
   </content>
 {% endfor %}
